@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "64705398913",
+    "project_id": "kskt-app",
+    "storage_bucket": "kskt-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64705398913:android:1baea3ebb6103d2f166580",
+        "android_client_info": {
+          "package_name": "com.example.firebase_signin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64705398913-ig57r0umo7q3ac7j4m9p4bve0nqk3feo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUWatkf5RGhhQt2_ZyktKVGcblOmAiwAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64705398913-ig57r0umo7q3ac7j4m9p4bve0nqk3feo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
