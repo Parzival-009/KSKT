@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_signin/utils/color_utils.dart';
 
 Image logoWidget(String imageName) {
   return Image.asset(
@@ -6,7 +7,7 @@ Image logoWidget(String imageName) {
     fit: BoxFit.fitWidth,
     width: 240,
     height: 240,
-    color: Colors.white,
+    // color: Colors.white,
   );
 }
 
@@ -65,4 +66,19 @@ Container firebaseUIButton(BuildContext context, String title, Function onTap) {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
     ),
   );
+}
+
+LinearGradient colorScheme(){
+  return LinearGradient(colors: [
+          hexStringToColor("007f5f"),
+          hexStringToColor("2b9348"),
+          hexStringToColor("55a630"),
+          hexStringToColor("80b918"),
+          hexStringToColor("aacc00"),
+          hexStringToColor("bfd200"),
+          hexStringToColor("d4d700"),
+          // hexStringToColor("dddf00"),
+          hexStringToColor("eeef20")
+          // hexStringToColor("ffff3f")
+        ], begin: Alignment.topLeft, end: Alignment.bottomRight);
 }
