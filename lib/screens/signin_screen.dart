@@ -1,9 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_signin/reusable_widgets/provider.dart';
 import 'package:firebase_signin/reusable_widgets/reusable_widget.dart';
 import 'package:firebase_signin/screens/home_screen.dart';
 import 'package:firebase_signin/screens/reset_password.dart';
 import 'package:firebase_signin/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -21,8 +24,7 @@ class _SignInScreenState extends State<SignInScreen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-            gradient: colorScheme()),
+        decoration: BoxDecoration(gradient: colorScheme()),
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.fromLTRB(
@@ -55,6 +57,11 @@ class _SignInScreenState extends State<SignInScreen> {
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");
                   });
+                }),
+                firebaseUIButton(context, "Sign in with Google", () {
+                  final provider =
+                      Provider.of<GoogleSignInProvider>(context, listen: false);
+                  provider.googleLogin(context);
                 }),
                 signUpOption()
               ],
