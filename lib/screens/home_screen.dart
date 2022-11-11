@@ -83,14 +83,34 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('Farmers List'),
         centerTitle: true,
         backgroundColor: Colors.green,
+        automaticallyImplyLeading: false,
 
       ),
-      body: Container(
-        decoration: BoxDecoration(
-            gradient: colorScheme()),
-        child: Column(
-          children: f.map((farmer) => farmerCard(farmer)).toList(),
-        ),
+      body:
+          Container(
+          decoration: BoxDecoration(
+              gradient: colorScheme()),
+          child: Column(
+            children: f.map((farmer) => farmerCard(farmer)).toList(),
+          ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+
+        child: SizedBox(
+          height: 50,
+          child: ElevatedButton(
+
+            onPressed:  () {
+            FirebaseAuth.instance.signOut().then((value) {
+              print("Signed Out");
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const SignInScreen()));
+            });
+          },
+            child: const Text("Logout"),),
+        )
+
+        ,
       ),
     );
   }

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "64705398913",
+    "firebase_url": "https://kskt-app-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "kskt-app",
     "storage_bucket": "kskt-app.appspot.com"
   },
